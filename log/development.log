@@ -551,3 +551,4 @@ Processing by ArtistsController#edit as HTML
 Completed 200 OK in 46ms (Views: 16.9ms | ActiveRecord: 19.9ms (1 query, 0 cached) | GC: 0.7ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m

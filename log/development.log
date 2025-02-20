@@ -538,3 +538,16 @@ Processing by ArtistsController#show as HTML
 Completed 200 OK in 98ms (Views: 18.3ms | ActiveRecord: 25.3ms (1 query, 0 cached) | GC: 0.6ms)
 
 
+Started GET "/artists/1/edit" for 127.0.0.1 at 2025-02-20 15:29:31 +0100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArtist Load (14.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='edit',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 7.5ms | GC: 0.3ms)
+  Rendered artists/edit.html.erb within layouts/application (Duration: 15.0ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | GC: 0.3ms)
+Completed 200 OK in 46ms (Views: 16.9ms | ActiveRecord: 19.9ms (1 query, 0 cached) | GC: 0.7ms)
+
+

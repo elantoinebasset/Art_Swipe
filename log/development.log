@@ -1833,3 +1833,1541 @@ Completed 200 OK in 44ms (Views: 13.7ms | ActiveRecord: 0.2ms (1 query, 0 cached
 
 
   [1m[36mActiveRecord::SchemaMigration Load (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+Started GET "/artists" for ::1 at 2025-02-20 17:26:40 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/index.html.erb within layouts/application (Duration: 4.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | GC: 0.0ms)
+Completed 200 OK in 34ms (Views: 7.2ms | ActiveRecord: 2.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:27:34 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 9.9ms | GC: 2.3ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 13.2ms | GC: 2.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | GC: 2.3ms)
+Completed 200 OK in 40ms (Views: 17.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.3ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:30:18 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 11.0ms | GC: 1.7ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 13.8ms | GC: 1.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | GC: 2.3ms)
+Completed 200 OK in 85ms (Views: 24.9ms | ActiveRecord: 11.2ms (0 queries, 0 cached) | GC: 14.2ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:30:20 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 6.1ms | GC: 0.4ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 8.9ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | GC: 0.4ms)
+Completed 200 OK in 52ms (Views: 15.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:30:34 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 6.7ms | GC: 0.5ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 9.5ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | GC: 0.5ms)
+Completed 200 OK in 67ms (Views: 18.2ms | ActiveRecord: 11.2ms (0 queries, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:32:35 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/new.html.erb within layouts/application (Duration: 4.0ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | GC: 0.6ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 19.6ms (0 queries, 0 cached) | GC: 2.6ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% content_for :title, "New artist" %>
+
+<h1>New artist</h1>
+
+<%= render "form", artist: @artist %>
+
+<br>
+
+<div>
+  <%= link_to "Back to artists", artists_path class="btn btn-outline-success" %>
+</div>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/debian/Documents/Art_Swipe/app/views/artists/new.html.erb:10: syntax errors found
+   8 | 
+   9 | <div>
+> 10 | ... class="btn btn-outline-success" ); @output_buffer.safe_append=' ...
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected class definition in method body
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected 'class', expecting end-of-input
+     |          ^ unexpected '=', ignoring it
+     |                                    ^ expected an `end` to close the `class` statement
+     |                                     ^ unexpected ')', assuming it is closing the parent parentheses
+     |                                     ^ unexpected ')', expecting end-of-input
+  11 | </div>
+  12 | '.freeze;
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% content_for :title, "New artist" %>
+
+<h1>New artist</h1>
+
+<%= render "form", artist: @artist %>
+
+<br>
+
+<div>
+  <%= link_to "Back to artists", artists_path class="btn btn-outline-success" %>
+</div>
+
+):
+1:    <% content_for :title, "New artist" %>
+2:    
+3:    <h1>New artist</h1>
+4:    
+5:    <%= render "form", artist: @artist %>
+6:    
+7:    <br>
+8:    
+9:    <div>
+10:      <%= link_to "Back to artists", artists_path class="btn btn-outline-success" %>
+11:    </div>
+  
+app/views/artists/new.html.erb:10: syntax errors found
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/debian/Documents/Art_Swipe/app/views/artists/new.html.erb:10: syntax errors found
+   8 | 
+   9 | <div>
+> 10 | ... class="btn btn-outline-success" ); @output_buffer.safe_append=' ...
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected class definition in method body
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected 'class', expecting end-of-input
+     |          ^ unexpected '=', ignoring it
+     |                                    ^ expected an `end` to close the `class` statement
+     |                                     ^ unexpected ')', assuming it is closing the parent parentheses
+     |                                     ^ unexpected ')', expecting end-of-input
+  11 | </div>
+  12 | '.freeze;
+):
+  
+app/views/artists/new.html.erb:10: syntax errors found
+Started GET "/artists/new" for ::1 at 2025-02-20 17:32:38 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/new.html.erb within layouts/application (Duration: 10.9ms | GC: 5.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | GC: 5.6ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 5.6ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% content_for :title, "New artist" %>
+
+<h1>New artist</h1>
+
+<%= render "form", artist: @artist %>
+
+<br>
+
+<div>
+  <%= link_to "Back to artists", artists_path class="btn btn-outline-success" %>
+</div>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/debian/Documents/Art_Swipe/app/views/artists/new.html.erb:10: syntax errors found
+   8 | 
+   9 | <div>
+> 10 | ... class="btn btn-outline-success" ); @output_buffer.safe_append=' ...
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected class definition in method body
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected 'class', expecting end-of-input
+     |          ^ unexpected '=', ignoring it
+     |                                    ^ expected an `end` to close the `class` statement
+     |                                     ^ unexpected ')', assuming it is closing the parent parentheses
+     |                                     ^ unexpected ')', expecting end-of-input
+  11 | </div>
+  12 | '.freeze;
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% content_for :title, "New artist" %>
+
+<h1>New artist</h1>
+
+<%= render "form", artist: @artist %>
+
+<br>
+
+<div>
+  <%= link_to "Back to artists", artists_path class="btn btn-outline-success" %>
+</div>
+
+):
+1:    <% content_for :title, "New artist" %>
+2:    
+3:    <h1>New artist</h1>
+4:    
+5:    <%= render "form", artist: @artist %>
+6:    
+7:    <br>
+8:    
+9:    <div>
+10:      <%= link_to "Back to artists", artists_path class="btn btn-outline-success" %>
+11:    </div>
+  
+app/views/artists/new.html.erb:10: syntax errors found
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/debian/Documents/Art_Swipe/app/views/artists/new.html.erb:10: syntax errors found
+   8 | 
+   9 | <div>
+> 10 | ... class="btn btn-outline-success" ); @output_buffer.safe_append=' ...
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected class definition in method body
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected 'class', expecting end-of-input
+     |          ^ unexpected '=', ignoring it
+     |                                    ^ expected an `end` to close the `class` statement
+     |                                     ^ unexpected ')', assuming it is closing the parent parentheses
+     |                                     ^ unexpected ')', expecting end-of-input
+  11 | </div>
+  12 | '.freeze;
+):
+  
+app/views/artists/new.html.erb:10: syntax errors found
+Started GET "/artists/new" for ::1 at 2025-02-20 17:32:55 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/new.html.erb within layouts/application (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 4.5ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% content_for :title, "New artist" %>
+
+<h1>New artist</h1>
+
+<%= render "form", artist: @artist %>
+
+<br>
+
+
+  <%= link_to "Back to artists", artists_path class="btn btn-outline-success" %>
+
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/debian/Documents/Art_Swipe/app/views/artists/new.html.erb:10: syntax errors found
+   8 | 
+   9 | 
+> 10 | ... class="btn btn-outline-success" );
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected class definition in method body
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected 'class', expecting end-of-input
+     |          ^ unexpected '=', ignoring it
+     |                                    ^ expected an `end` to close the `class` statement
+     |                                     ^ unexpected ')', assuming it is closing the parent parentheses
+     |                                     ^ unexpected ')', expecting end-of-input
+  11 |  @output_buffer.safe_append='
+  12 | 
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% content_for :title, "New artist" %>
+
+<h1>New artist</h1>
+
+<%= render "form", artist: @artist %>
+
+<br>
+
+
+  <%= link_to "Back to artists", artists_path class="btn btn-outline-success" %>
+
+
+):
+1:    <% content_for :title, "New artist" %>
+2:    
+3:    <h1>New artist</h1>
+4:    
+5:    <%= render "form", artist: @artist %>
+6:    
+7:    <br>
+8:    
+9:    
+10:      <%= link_to "Back to artists", artists_path class="btn btn-outline-success" %>
+  
+app/views/artists/new.html.erb:10: syntax errors found
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/debian/Documents/Art_Swipe/app/views/artists/new.html.erb:10: syntax errors found
+   8 | 
+   9 | 
+> 10 | ... class="btn btn-outline-success" );
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected class definition in method body
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected 'class', expecting end-of-input
+     |          ^ unexpected '=', ignoring it
+     |                                    ^ expected an `end` to close the `class` statement
+     |                                     ^ unexpected ')', assuming it is closing the parent parentheses
+     |                                     ^ unexpected ')', expecting end-of-input
+  11 |  @output_buffer.safe_append='
+  12 | 
+):
+  
+app/views/artists/new.html.erb:10: syntax errors found
+Started GET "/artists/new" for ::1 at 2025-02-20 17:33:05 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 16.5ms | GC: 4.0ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 22.7ms | GC: 4.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | GC: 4.0ms)
+Completed 200 OK in 95ms (Views: 31.2ms | ActiveRecord: 14.8ms (0 queries, 0 cached) | GC: 14.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:33:14 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/index.html.erb within layouts/application (Duration: 16.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | GC: 0.0ms)
+Completed 200 OK in 56ms (Views: 22.0ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:33:16 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 4.4ms | GC: 0.0ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 7.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | GC: 0.4ms)
+Completed 200 OK in 47ms (Views: 14.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started POST "/artists" for ::1 at 2025-02-20 17:34:33 +0100
+Processing by ArtistsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "artist" => {"picture" => "", "first_name" => "antoine", "last_name" => "basset", "date_of_birth(1i)" => "2025", "date_of_birth(2i)" => "2", "date_of_birth(3i)" => "20"}, "commit" => "Create Artist"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN /*action='create',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:27:in 'block in ArtistsController#create'
+  [1m[36mArtist Create (6.7ms)[0m  [1m[32mINSERT INTO "artists" ("picture", "first_name", "last_name", "date_of_birth", "created_at", "updated_at") VALUES ('', 'antoine', 'basset', '2025-02-20', '2025-02-20 16:34:33.578306', '2025-02-20 16:34:33.578306') RETURNING "id" /*action='create',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:27:in 'block in ArtistsController#create'
+  [1m[36mTRANSACTION (10.5ms)[0m  [1m[35mCOMMIT /*action='create',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:27:in 'block in ArtistsController#create'
+Redirected to http://[::1]:3000/artists/3
+Completed 302 Found in 61ms (ActiveRecord: 17.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:34:33 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 5.3ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | GC: 0.6ms)
+Completed 200 OK in 57ms (Views: 9.7ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:34:53 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (Duration: 1.7ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.5ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 8.2ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<%= render @artist %>
+
+  
+<%= link_to "Edit this artist", edit_artist_path(@artist) %>
+  
+<%= link_to "Back to artists", artists_path class:"btn btn-outline-success" %>
+
+
+
+<%= button_to "Destroy this artist", @artist, method: :delete %>
+
+</div>
+
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/debian/Documents/Art_Swipe/app/views/artists/show.html.erb:8: syntax errors found
+  6 | '.freeze; @output_buffer.append=( link_to "Edit this artist", edit_artist_path(@artist) ); @output_buffer.safe_append='
+  7 |   
+> 8 | ...  class:"btn btn-outline-success" ); @output_buffer.safe_append=' ...
+    |     ^ expected a matching `)`
+    |      ^~~~~~ unexpected label, ignoring it
+    |      ^~~~~~ unexpected label, expecting end-of-input
+    |      ^~~~~~ unexpected label, ignoring it
+    |      ^~~~~~ unexpected label, expecting end-of-input
+    |                                      ^ unexpected ')', ignoring it
+    |                                      ^ unexpected ')', expecting end-of-input
+  9 | 
+  10 | 
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<%= render @artist %>
+
+  
+<%= link_to "Edit this artist", edit_artist_path(@artist) %>
+  
+<%= link_to "Back to artists", artists_path class:"btn btn-outline-success" %>
+
+
+
+<%= button_to "Destroy this artist", @artist, method: :delete %>
+
+</div>
+
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <%= render @artist %>
+4:    
+5:      
+6:    <%= link_to "Edit this artist", edit_artist_path(@artist) %>
+7:      
+8:    <%= link_to "Back to artists", artists_path class:"btn btn-outline-success" %>
+9:    
+10:    
+11:    
+12:    <%= button_to "Destroy this artist", @artist, method: :delete %>
+13:    
+14:    </div>
+  
+app/views/artists/show.html.erb:8: syntax errors found
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/debian/Documents/Art_Swipe/app/views/artists/show.html.erb:8: syntax errors found
+  6 | '.freeze; @output_buffer.append=( link_to "Edit this artist", edit_artist_path(@artist) ); @output_buffer.safe_append='
+  7 |   
+> 8 | ...  class:"btn btn-outline-success" ); @output_buffer.safe_append=' ...
+    |     ^ expected a matching `)`
+    |      ^~~~~~ unexpected label, ignoring it
+    |      ^~~~~~ unexpected label, expecting end-of-input
+    |      ^~~~~~ unexpected label, ignoring it
+    |      ^~~~~~ unexpected label, expecting end-of-input
+    |                                      ^ unexpected ')', ignoring it
+    |                                      ^ unexpected ')', expecting end-of-input
+  9 | 
+  10 | 
+):
+  
+app/views/artists/show.html.erb:8: syntax errors found
+Started GET "/artists/3" for ::1 at 2025-02-20 17:35:33 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (0.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 4.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | GC: 0.6ms)
+Completed 200 OK in 68ms (Views: 13.8ms | ActiveRecord: 3.8ms (1 query, 0 cached) | GC: 5.7ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:36:04 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (6.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 1.9ms | GC: 1.3ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 14.3ms | GC: 5.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | GC: 16.5ms)
+Completed 200 OK in 142ms (Views: 46.2ms | ActiveRecord: 11.4ms (1 query, 0 cached) | GC: 46.7ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:36:31 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (Duration: 2.5ms | GC: 1.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | GC: 1.4ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 6.1ms (1 query, 0 cached) | GC: 1.6ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<%= render @artist %>
+
+  
+<%= link_to "Edit this artist", edit_artist_path(@artist), class:"btn btn-outline-success"%>
+  
+<%= link_to "Back to artists", artists_path, class:"btn btn-outline-success" %>
+
+
+
+<%= button_to "Destroy this artist", @artist, method: :delete, class="btn btn-outline-danger" %>
+
+</div>
+
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/debian/Documents/Art_Swipe/app/views/artists/show.html.erb:12: syntax errors found
+  10 | 
+  11 | 
+> 12 | ... class="btn btn-outline-danger" ); @output_buffer.safe_append='
+ ...
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected class definition in method body
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |          ^ unexpected '=', ignoring it
+     |                                   ^ expected a `=>` between the hash key and value
+     |                                   ^ expected an `end` to close the `class` statement
+     |                                    ^ unexpected ')', assuming it is closing the parent parentheses
+     |                                    ^ unexpected ')'; expected a value in the hash literal
+     |                                    ^ unexpected ')', assuming it is closing the parent parentheses
+     |                                    ^ unexpected ')', expecting end-of-input
+     |                                     ^ expected an `end` to close the `def` statement
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<%= render @artist %>
+
+  
+<%= link_to "Edit this artist", edit_artist_path(@artist), class:"btn btn-outline-success"%>
+  
+<%= link_to "Back to artists", artists_path, class:"btn btn-outline-success" %>
+
+
+
+<%= button_to "Destroy this artist", @artist, method: :delete, class="btn btn-outline-danger" %>
+
+</div>
+
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <%= render @artist %>
+4:    
+5:      
+6:    <%= link_to "Edit this artist", edit_artist_path(@artist), class:"btn btn-outline-success"%>
+7:      
+8:    <%= link_to "Back to artists", artists_path, class:"btn btn-outline-success" %>
+9:    
+10:    
+11:    
+12:    <%= button_to "Destroy this artist", @artist, method: :delete, class="btn btn-outline-danger" %>
+13:    
+14:    </div>
+  
+app/views/artists/show.html.erb:12: syntax errors found
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/debian/Documents/Art_Swipe/app/views/artists/show.html.erb:12: syntax errors found
+  10 | 
+  11 | 
+> 12 | ... class="btn btn-outline-danger" ); @output_buffer.safe_append='
+ ...
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected class definition in method body
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |     ^~~~~ unexpected constant path after `class`; class/module name must be CONSTANT
+     |          ^ unexpected '=', ignoring it
+     |                                   ^ expected a `=>` between the hash key and value
+     |                                   ^ expected an `end` to close the `class` statement
+     |                                    ^ unexpected ')', assuming it is closing the parent parentheses
+     |                                    ^ unexpected ')'; expected a value in the hash literal
+     |                                    ^ unexpected ')', assuming it is closing the parent parentheses
+     |                                    ^ unexpected ')', expecting end-of-input
+     |                                     ^ expected an `end` to close the `def` statement
+):
+  
+app/views/artists/show.html.erb:12: syntax errors found
+Started GET "/artists/3" for ::1 at 2025-02-20 17:36:55 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (2.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 8.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | GC: 0.0ms)
+Completed 200 OK in 113ms (Views: 23.1ms | ActiveRecord: 29.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:37:14 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (4.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 20.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | GC: 0.0ms)
+Completed 200 OK in 60ms (Views: 20.2ms | ActiveRecord: 4.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:37:51 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 2.6ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 44.2ms | GC: 4.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 50.6ms | GC: 4.2ms)
+Completed 200 OK in 86ms (Views: 29.3ms | ActiveRecord: 24.6ms (1 query, 0 cached) | GC: 7.3ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:37:59 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 26.5ms | GC: 1.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | GC: 2.7ms)
+Completed 200 OK in 63ms (Views: 23.6ms | ActiveRecord: 12.1ms (1 query, 0 cached) | GC: 2.7ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:38:07 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 20.4ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | GC: 0.1ms)
+Completed 200 OK in 65ms (Views: 18.9ms | ActiveRecord: 9.1ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:38:38 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 14.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | GC: 0.0ms)
+Completed 200 OK in 54ms (Views: 17.5ms | ActiveRecord: 5.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:38:42 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 14.9ms | GC: 5.6ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 20.4ms | GC: 5.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | GC: 7.5ms)
+Completed 200 OK in 80ms (Views: 29.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 7.5ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:38:59 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 12.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | GC: 0.5ms)
+Completed 200 OK in 42ms (Views: 15.3ms | ActiveRecord: 3.5ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:39:00 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 12.4ms | GC: 0.4ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 15.0ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | GC: 0.4ms)
+Completed 200 OK in 53ms (Views: 20.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:39:17 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 6.1ms | GC: 0.0ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 10.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | GC: 0.0ms)
+Completed 200 OK in 63ms (Views: 19.5ms | ActiveRecord: 4.8ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:39:21 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 11.9ms | GC: 3.5ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 14.7ms | GC: 3.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | GC: 3.5ms)
+Completed 200 OK in 83ms (Views: 22.2ms | ActiveRecord: 5.2ms (0 queries, 0 cached) | GC: 11.2ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:39:44 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/new.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 4.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% content_for :title, "New artist" %>
+
+<h1>New artist</h1>
+
+<%= render "form", artist: @artist %>
+
+<br>
+
+<div>
+  <%= link_to "Back to artist", artists_path class:"btn btn-outline-light"%>
+</div>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/debian/Documents/Art_Swipe/app/views/artists/new.html.erb:10: syntax errors found
+   8 | 
+   9 | <div>
+> 10 | ...  class:"btn btn-outline-light"); @output_buffer.safe_append=' ...
+     |     ^ expected a matching `)`
+     |      ^~~~~~ unexpected label, ignoring it
+     |      ^~~~~~ unexpected label, expecting end-of-input
+     |      ^~~~~~ unexpected label, ignoring it
+     |      ^~~~~~ unexpected label, expecting end-of-input
+     |                                   ^ unexpected ')', ignoring it
+     |                                   ^ unexpected ')', expecting end-of-input
+  11 | </div>
+  12 | '.freeze;
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% content_for :title, "New artist" %>
+
+<h1>New artist</h1>
+
+<%= render "form", artist: @artist %>
+
+<br>
+
+<div>
+  <%= link_to "Back to artist", artists_path class:"btn btn-outline-light"%>
+</div>
+
+):
+1:    <% content_for :title, "New artist" %>
+2:    
+3:    <h1>New artist</h1>
+4:    
+5:    <%= render "form", artist: @artist %>
+6:    
+7:    <br>
+8:    
+9:    <div>
+10:      <%= link_to "Back to artist", artists_path class:"btn btn-outline-light"%>
+11:    </div>
+  
+app/views/artists/new.html.erb:10: syntax errors found
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/debian/Documents/Art_Swipe/app/views/artists/new.html.erb:10: syntax errors found
+   8 | 
+   9 | <div>
+> 10 | ...  class:"btn btn-outline-light"); @output_buffer.safe_append=' ...
+     |     ^ expected a matching `)`
+     |      ^~~~~~ unexpected label, ignoring it
+     |      ^~~~~~ unexpected label, expecting end-of-input
+     |      ^~~~~~ unexpected label, ignoring it
+     |      ^~~~~~ unexpected label, expecting end-of-input
+     |                                   ^ unexpected ')', ignoring it
+     |                                   ^ unexpected ')', expecting end-of-input
+  11 | </div>
+  12 | '.freeze;
+):
+  
+app/views/artists/new.html.erb:10: syntax errors found
+Started GET "/artists/new" for ::1 at 2025-02-20 17:39:52 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 6.3ms | GC: 0.0ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 8.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | GC: 0.0ms)
+Completed 200 OK in 52ms (Views: 16.1ms | ActiveRecord: 3.5ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:40:04 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/new.html.erb within layouts/application (Duration: 15.8ms | GC: 3.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | GC: 3.2ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 11.7ms (0 queries, 0 cached) | GC: 9.7ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% content_for :title, "New artist" %>
+
+<h1>New artist</h1>
+
+<%= render "form", artist: @artist %>
+
+<br>
+
+<div>
+  <%= link_to "Back to artist", artists_path, %>
+</div>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/debian/Documents/Art_Swipe/app/views/artists/new.html.erb:10: syntax errors found
+   8 | 
+   9 | <div>
+> 10 | ... , ); @output_buffer.safe_append='
+ ...
+     |     ^ unexpected ')'; expected an argument
+     |       ^ unexpected ')', assuming it is closing the parent parentheses
+     |       ^ unexpected ')'; expected an argument
+     |        ^ expected an `end` to close the `def` statement
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% content_for :title, "New artist" %>
+
+<h1>New artist</h1>
+
+<%= render "form", artist: @artist %>
+
+<br>
+
+<div>
+  <%= link_to "Back to artist", artists_path, %>
+</div>
+
+):
+1:    <% content_for :title, "New artist" %>
+2:    
+3:    <h1>New artist</h1>
+4:    
+5:    <%= render "form", artist: @artist %>
+6:    
+7:    <br>
+8:    
+9:    <div>
+10:      <%= link_to "Back to artist", artists_path, %>
+11:    </div>
+  
+app/views/artists/new.html.erb:10: syntax errors found
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/debian/Documents/Art_Swipe/app/views/artists/new.html.erb:10: syntax errors found
+   8 | 
+   9 | <div>
+> 10 | ... , ); @output_buffer.safe_append='
+ ...
+     |     ^ unexpected ')'; expected an argument
+     |       ^ unexpected ')', assuming it is closing the parent parentheses
+     |       ^ unexpected ')'; expected an argument
+     |        ^ expected an `end` to close the `def` statement
+):
+  
+app/views/artists/new.html.erb:10: syntax errors found
+Started GET "/artists/new" for ::1 at 2025-02-20 17:40:11 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 18.4ms | GC: 7.6ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 24.6ms | GC: 7.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 40.1ms | GC: 7.6ms)
+Completed 200 OK in 116ms (Views: 52.0ms | ActiveRecord: 16.1ms (0 queries, 0 cached) | GC: 10.7ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:40:40 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 5.8ms | GC: 0.9ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 11.1ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | GC: 3.1ms)
+Completed 200 OK in 82ms (Views: 20.5ms | ActiveRecord: 20.8ms (0 queries, 0 cached) | GC: 6.2ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:41:01 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 19.4ms | GC: 13.9ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 21.3ms | GC: 13.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | GC: 20.4ms)
+Completed 200 OK in 97ms (Views: 36.6ms | ActiveRecord: 9.1ms (0 queries, 0 cached) | GC: 28.6ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:41:11 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (5.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 25.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 30.9ms | GC: 0.0ms)
+Completed 200 OK in 84ms (Views: 26.0ms | ActiveRecord: 5.3ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:42:04 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 4.9ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | GC: 0.9ms)
+Completed 200 OK in 30ms (Views: 7.7ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:42:17 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | GC: 0.0ms)
+Completed 200 OK in 94ms (Views: 14.4ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:42:20 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | GC: 0.0ms)
+Completed 200 OK in 43ms (Views: 8.3ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:42:25 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (5.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 5.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | GC: 0.0ms)
+Completed 200 OK in 108ms (Views: 22.5ms | ActiveRecord: 28.8ms (1 query, 0 cached) | GC: 5.4ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:42:27 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (6.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 14.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | GC: 0.0ms)
+Completed 200 OK in 62ms (Views: 19.3ms | ActiveRecord: 6.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:42:49 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (3.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 37.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 42.3ms | GC: 0.0ms)
+Completed 200 OK in 81ms (Views: 23.0ms | ActiveRecord: 22.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:43:02 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (5.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 3.8ms | GC: 0.9ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 7.8ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | GC: 0.9ms)
+Completed 200 OK in 80ms (Views: 13.1ms | ActiveRecord: 16.3ms (1 query, 0 cached) | GC: 1.6ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:43:06 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 14.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | GC: 0.0ms)
+Completed 200 OK in 51ms (Views: 19.2ms | ActiveRecord: 2.5ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:43:07 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 8.1ms | GC: 0.5ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 12.1ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | GC: 0.5ms)
+Completed 200 OK in 62ms (Views: 20.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:43:08 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 3.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | GC: 0.0ms)
+Completed 200 OK in 36ms (Views: 5.0ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:43:10 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (4.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 55ms (Views: 4.0ms | ActiveRecord: 4.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:43:14 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (4.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 15.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | GC: 0.0ms)
+Completed 200 OK in 62ms (Views: 21.3ms | ActiveRecord: 4.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:43:32 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (3.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 1.9ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 25.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | GC: 0.0ms)
+Completed 200 OK in 75ms (Views: 21.2ms | ActiveRecord: 13.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:44:00 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (6.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 47.9ms | GC: 2.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 55.8ms | GC: 3.0ms)
+Completed 200 OK in 84ms (Views: 30.0ms | ActiveRecord: 27.4ms (1 query, 0 cached) | GC: 3.9ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:44:04 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 2.2ms | GC: 2.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 5.4ms | GC: 2.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | GC: 2.0ms)
+Completed 200 OK in 63ms (Views: 16.2ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 2.0ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:45:05 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (1.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 2.5ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 8.0ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | GC: 0.4ms)
+Completed 200 OK in 80ms (Views: 15.8ms | ActiveRecord: 17.0ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:45:22 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (3.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 46ms (Views: 2.9ms | ActiveRecord: 3.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:45:26 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | GC: 0.0ms)
+Completed 200 OK in 60ms (Views: 11.1ms | ActiveRecord: 5.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:46:05 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 6.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | GC: 0.0ms)
+Completed 200 OK in 74ms (Views: 10.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:46:20 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (3.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 21.1ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | GC: 0.8ms)
+Completed 200 OK in 61ms (Views: 23.7ms | ActiveRecord: 6.9ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:46:23 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 27.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 36.5ms | GC: 0.0ms)
+Completed 200 OK in 74ms (Views: 24.3ms | ActiveRecord: 14.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:46:24 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (3.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 9.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 12.7ms | ActiveRecord: 3.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:46:28 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 9.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | GC: 0.0ms)
+Completed 200 OK in 45ms (Views: 12.4ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:46:30 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 7.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | GC: 0.0ms)
+Completed 200 OK in 36ms (Views: 11.2ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:46:32 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (4.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 51ms (Views: 3.7ms | ActiveRecord: 4.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:46:38 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (4.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 3.4ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | GC: 0.5ms)
+Completed 200 OK in 70ms (Views: 15.3ms | ActiveRecord: 9.2ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:46:48 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 7.0ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | GC: 0.5ms)
+Completed 200 OK in 83ms (Views: 15.4ms | ActiveRecord: 17.9ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:48:16 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (2.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.7ms | GC: 0.2ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 13.4ms | GC: 7.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | GC: 10.2ms)
+Completed 200 OK in 108ms (Views: 29.9ms | ActiveRecord: 16.3ms (1 query, 0 cached) | GC: 25.6ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:48:45 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (6.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | GC: 0.0ms)
+Completed 200 OK in 38ms (Views: 3.6ms | ActiveRecord: 6.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:49:26 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (1.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 7.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | GC: 0.0ms)
+Completed 200 OK in 86ms (Views: 18.5ms | ActiveRecord: 20.8ms (1 query, 0 cached) | GC: 2.5ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 17:49:51 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (3.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 3.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | GC: 0.0ms)
+Completed 200 OK in 59ms (Views: 16.3ms | ActiveRecord: 7.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:49:58 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 11.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | GC: 0.0ms)
+Completed 200 OK in 49ms (Views: 11.4ms | ActiveRecord: 2.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:50:14 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (4.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 39.6ms | GC: 1.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 50.0ms | GC: 1.7ms)
+Completed 200 OK in 94ms (Views: 30.0ms | ActiveRecord: 24.3ms (1 query, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:50:30 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (3.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 33.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 43.7ms | GC: 0.3ms)
+Completed 200 OK in 88ms (Views: 33.8ms | ActiveRecord: 14.4ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:50:36 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 7.4ms | GC: 0.3ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 13.7ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | GC: 0.3ms)
+Completed 200 OK in 46ms (Views: 19.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:50:37 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 2.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 3.8ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:50:39 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 4.7ms | GC: 0.0ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 5.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 8.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:50:49 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 4.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.0ms)
+Completed 200 OK in 35ms (Views: 7.0ms | ActiveRecord: 2.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:51:41 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 4.8ms | GC: 3.5ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 33.4ms | GC: 3.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | GC: 3.5ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 16.3ms (1 query, 0 cached) | GC: 4.5ms)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div id="<%= dom_id artist, class:d-grid gap-2 col-6 mx-auto %>">
+  <p>
+    <div >
+    <h1><strong>Picture:</strong> </h1>
+    </div>
+    <%= image_tag artist.picture %>
+  </p>
+
+  <p>
+    <div>
+    <h3> <strong>First name:</strong> </h3>
+    </div>
+    <%= artist.first_name %>
+  </p>
+
+  <p>
+    <div >
+    <h3> <strong>Last name:</strong> </h3>
+    </div>
+    <%= artist.last_name %>
+  </p>
+
+  <p>
+    <div s>
+    <h3> <strong>Date of birth:</strong> </h3>
+    </div>
+    <%= artist.date_of_birth %>
+  </p>
+</div>
+
+)
+Caused by: ActiveSupport::SyntaxErrorProxy (/home/debian/Documents/Art_Swipe/app/views/artists/_artist.html.erb:1: syntax errors found
+  0 |           def _app_views_artists__artist_html_erb__998952175189688054_151544(local_assigns, output_buffer, &_)
+> 1 | ... gap-2 col-6 mx-auto ); @output_buffer.safe_a ...
+    |     ^~~ unexpected local variable or method, expecting end-of-input
+    |           ^~~ unexpected local variable or method, expecting end-of-input
+    |                 ^~ unexpected local variable or method, expecting end-of-input
+  2 |   <p>
+  3 |     <div >
+)
+
+Information for: ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div id="<%= dom_id artist, class:d-grid gap-2 col-6 mx-auto %>">
+  <p>
+    <div >
+    <h1><strong>Picture:</strong> </h1>
+    </div>
+    <%= image_tag artist.picture %>
+  </p>
+
+  <p>
+    <div>
+    <h3> <strong>First name:</strong> </h3>
+    </div>
+    <%= artist.first_name %>
+  </p>
+
+  <p>
+    <div >
+    <h3> <strong>Last name:</strong> </h3>
+    </div>
+    <%= artist.last_name %>
+  </p>
+
+  <p>
+    <div s>
+    <h3> <strong>Date of birth:</strong> </h3>
+    </div>
+    <%= artist.date_of_birth %>
+  </p>
+</div>
+
+):
+1:    <div id="<%= dom_id artist, class:d-grid gap-2 col-6 mx-auto %>">
+2:      <p>
+3:        <div >
+4:        <h1><strong>Picture:</strong> </h1>
+5:        </div>
+6:        <%= image_tag artist.picture %>
+7:      </p>
+8:    
+9:      <p>
+10:        <div>
+11:        <h3> <strong>First name:</strong> </h3>
+12:        </div>
+13:        <%= artist.first_name %>
+14:      </p>
+15:    
+16:      <p>
+17:        <div >
+18:        <h3> <strong>Last name:</strong> </h3>
+19:        </div>
+20:        <%= artist.last_name %>
+21:      </p>
+22:    
+23:      <p>
+24:        <div s>
+25:        <h3> <strong>Date of birth:</strong> </h3>
+26:        </div>
+27:        <%= artist.date_of_birth %>
+28:      </p>
+29:    </div>
+  
+app/views/artists/_artist.html.erb:1: syntax errors found
+app/views/artists/index.html.erb:9
+app/views/artists/index.html.erb:8
+
+Information for cause: ActiveSupport::SyntaxErrorProxy (/home/debian/Documents/Art_Swipe/app/views/artists/_artist.html.erb:1: syntax errors found
+  0 |           def _app_views_artists__artist_html_erb__998952175189688054_151544(local_assigns, output_buffer, &_)
+> 1 | ... gap-2 col-6 mx-auto ); @output_buffer.safe_a ...
+    |     ^~~ unexpected local variable or method, expecting end-of-input
+    |           ^~~ unexpected local variable or method, expecting end-of-input
+    |                 ^~ unexpected local variable or method, expecting end-of-input
+  2 |   <p>
+  3 |     <div >
+):
+  
+app/views/artists/_artist.html.erb:1: syntax errors found
+app/views/artists/index.html.erb:9
+app/views/artists/index.html.erb:8
+Started GET "/artists" for ::1 at 2025-02-20 17:51:52 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 1.8ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 36.7ms | GC: 3.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 42.6ms | GC: 3.2ms)
+Completed 200 OK in 83ms (Views: 26.1ms | ActiveRecord: 21.6ms (1 query, 0 cached) | GC: 5.3ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 18:37:29 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (4.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 40.1ms | GC: 1.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.9ms | GC: 1.6ms)
+Completed 200 OK in 89ms (Views: 26.2ms | ActiveRecord: 22.4ms (1 query, 0 cached) | GC: 1.6ms)
+
+

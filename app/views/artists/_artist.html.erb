@@ -1,22 +1,21 @@
-<div id="<%= dom_id artist %>">
+<div id="<%= dom_id artist %>" style="text-align: center; margin: 100px;">
   <p>
-    <strong>Picture:</strong>
-    <%= artist.picture %>
+    <h1><strong>Picture:</strong> </h1>
+    <%= image_tag artist.picture, width: "250", style: "display: block; margin: auto;" %>
   </p>
 
   <p>
-    <strong>First name:</strong>
+    <h3> <strong>First name:</strong> </h3>
     <%= artist.first_name %>
   </p>
 
   <p>
-    <strong>Last name:</strong>
+    <h3> <strong>Last name:</strong> </h3>
     <%= artist.last_name %>
   </p>
 
   <p>
-    <strong>Date of birth:</strong>
+    <h3> <strong>Date of birth:</strong> </h3>
     <%= artist.date_of_birth %>
   </p>
-
 </div>

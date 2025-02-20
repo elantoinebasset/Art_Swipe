@@ -1,0 +1,36 @@
+  [1m[35mSQL (0.4ms)[0m  [1m[35mSET search_path TO public /*application='ArtSwipe'*/[0m
+  [1m[35m (129.1ms)[0m  [1m[35mCREATE DATABASE "art_swipe_development" ENCODING = 'unicode' /*application='ArtSwipe'*/[0m
+  [1m[35m (40.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='ArtSwipe'*/[0m
+  [1m[35m (18.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='ArtSwipe'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4099196472279122760) /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-02-20 10:16:05.283148', '2025-02-20 10:16:05.283152') RETURNING "key" /*application='ArtSwipe'*/[0m
+Migrating to CreateArtists (20250220101551)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='ArtSwipe'*/[0m
+  [1m[35m (12.6ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "picture" character varying, "first_name" character varying, "last_name" character varying, "date_of_birth" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250220101551') RETURNING "version" /*application='ArtSwipe'*/[0m
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[35mCOMMIT /*application='ArtSwipe'*/[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(4099196472279122760) /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-02-20 11:16:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/debian/.rbenv/versions/3.4.1/lib/ruby/gems/3.4.0/gems/railties-8.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/debian/.rbenv/versions/3.4.1/lib/ruby/gems/3.4.0/gems/railties-8.0.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 200 OK in 84ms (Views: 14.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 7.8ms)
+
+
+Started GET "/artists/new" for 127.0.0.1 at 2025-02-20 11:16:22 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 139.1ms | GC: 44.0ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 142.1ms | GC: 45.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 160.2ms | GC: 50.4ms)
+Completed 200 OK in 301ms (Views: 167.8ms | ActiveRecord: 31.8ms (0 queries, 0 cached) | GC: 75.3ms)
+
+
+Started GET "/assets/application-8b441ae0.css" for 127.0.0.1 at 2025-02-20 11:16:22 +0100
+Started GET "/assets/controllers/index-ee64e1f1.js" for 127.0.0.1 at 2025-02-20 11:16:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m

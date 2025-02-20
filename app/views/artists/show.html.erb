@@ -1,7 +1,10 @@
 <p style="color: green", ><%= notice %></p>
 
+<div class="container-fluid">
+    <div class="container-centrer">
 <%= render @artist %>
-
+    </div>
+</div>
   
 <%= link_to "Edit this artist", edit_artist_path(@artist), class:"btn btn-outline-success d-grid gap-2 col-6 mx-auto"%>
   
@@ -11,5 +14,5 @@
 
 <%= button_to "Destroy this artist", @artist, method: :delete, class:"btn btn-outline-danger d-grid gap-2 col-6 mx-auto" %>
 
-</div>
+
 

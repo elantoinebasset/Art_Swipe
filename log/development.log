@@ -5128,3 +5128,132 @@ Processing by ArtistsController#show as HTML
 Completed 200 OK in 38ms (Views: 9.1ms | ActiveRecord: 2.4ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/artists/3" for ::1 at 2025-02-20 19:33:13 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (1.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 2.5ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 5.9ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | GC: 0.2ms)
+Completed 200 OK in 93ms (Views: 16.6ms | ActiveRecord: 7.3ms (1 query, 0 cached) | GC: 14.5ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 19:33:33 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (5.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 6.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | GC: 0.0ms)
+Completed 200 OK in 84ms (Views: 20.5ms | ActiveRecord: 5.4ms (1 query, 0 cached) | GC: 3.7ms)
+
+
+Started GET "/assets/application-fb992848.css" for ::1 at 2025-02-20 19:33:33 +0100
+Started GET "/artists/3" for ::1 at 2025-02-20 19:38:36 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | GC: 0.6ms)
+Completed 200 OK in 52ms (Views: 10.1ms | ActiveRecord: 5.2ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/artists/3" for ::1 at 2025-02-20 19:39:10 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (1.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.0ms)
+Completed 200 OK in 55ms (Views: 7.3ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 5.7ms)
+
+
+Started GET "/assets/application-32eb1f95.css" for ::1 at 2025-02-20 19:39:11 +0100
+Started GET "/artists/3" for ::1 at 2025-02-20 19:40:04 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "3"}
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 3 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 47ms (Views: 4.1ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/assets/application-783bb419.css" for ::1 at 2025-02-20 19:40:04 +0100
+Started GET "/artists" for ::1 at 2025-02-20 19:40:17 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 9.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | GC: 0.0ms)
+Completed 200 OK in 38ms (Views: 14.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 19:42:02 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 11.0ms | GC: 0.9ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 14.3ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | GC: 0.9ms)
+Completed 200 OK in 51ms (Views: 20.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.9ms)
+
+
+Started POST "/artists" for ::1 at 2025-02-20 19:42:19 +0100
+Processing by ArtistsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "artist" => {"picture" => "data:image/jpeg;base64,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", "first_name" => "test", "last_name" => "test", "date_of_birth(1i)" => "2025", "date_of_birth(2i)" => "2", "date_of_birth(3i)" => "20"}, "commit" => "Create Artist"}
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[35mBEGIN /*action='create',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:27:in 'block in ArtistsController#create'
+  [1m[36mArtist Create (16.5ms)[0m  [1m[32mINSERT INTO "artists" ("picture", "first_name", "last_name", "date_of_birth", "created_at", "updated_at") VALUES ('data:image/jpeg;base64,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', 'test', 'test', '2025-02-20', '2025-02-20 18:42:19.877415', '2025-02-20 18:42:19.877415') RETURNING "id" /*action='create',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:27:in 'block in ArtistsController#create'
+  [1m[36mTRANSACTION (29.2ms)[0m  [1m[35mCOMMIT /*action='create',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:27:in 'block in ArtistsController#create'
+Redirected to http://[::1]:3000/artists/9
+Completed 302 Found in 90ms (ActiveRecord: 49.1ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/artists/9" for ::1 at 2025-02-20 19:42:19 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "9"}
+  [1m[36mArtist Load (5.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 9 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 3.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 5.3ms | ActiveRecord: 5.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 19:42:22 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 8.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | GC: 0.0ms)
+Completed 200 OK in 48ms (Views: 15.8ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.5ms)
+
+

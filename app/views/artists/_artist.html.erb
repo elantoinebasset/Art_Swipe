@@ -1,34 +1,35 @@
 <div class="container-fluid">
 <div id="<%= dom_id artist %>" class="artist-container">
 
-    <div class="artist-centre">
+    <div class="artist-photo">
     <h1><strong>Picture:</strong> </h1>
     
     <%= image_tag artist.picture %>
     </div>
- 
-
-
-    <div class="artist-centre">
-    <h3> <strong>First name:</strong> </h3>
     
-    <%= artist.first_name %>
-    </div>
-
-
-
-    <div class="artist-centre">
-    <h3> <strong>Last name:</strong> </h3>
     
-    <%= artist.last_name %>
-    </div>
-
-
-
-    <div class="artist-centre">
-    <h3> <strong>Date of birth:</strong> </h3>
+    <div class="artist-info">
+      <div class="artist-centre">
+      <h3> <strong>First name:</strong> </h3>
     
-    <%= artist.date_of_birth %>
+      <%= artist.first_name %>
+      </div>
+
+
+
+      <div class="artist-centre">
+      <h3> <strong>Last name:</strong> </h3>
+    
+      <%= artist.last_name %>
+      </div>
+
+
+
+      <div class="artist-centre">
+      <h3> <strong>Date of birth:</strong> </h3>
+    
+      <%= artist.date_of_birth %>
+      </div>
     </div>
 
 </div>

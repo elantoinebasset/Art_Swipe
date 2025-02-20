@@ -2,9 +2,15 @@
 
 <%= render @artist %>
 
-<div>
-  <%= link_to "Edit this artist", edit_artist_path(@artist) %> |
-  <%= link_to "Back to artists", artists_path %>
+    <div style="display: flex; justify-content: center;">
+  <%= link_to "Edit this artist", edit_artist_path(@artist), style: "display: block; margin-bottom: 10px; background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px;" %>
+    </div>
+        <div style="display: flex; justify-content: center;">
+  <%= link_to "Back to artists", artists_path, style: "display: block; margin-bottom: 10px; background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px;" %>
+        </div>
 
-  <%= button_to "Destroy this artist", @artist, method: :delete %>
+    <div style="display: flex; justify-content: center;">
+    <%= button_to "Destroy this artist", @artist, method: :delete, style: "background-color: red; color: white; padding: 10px 20px; border: none; border-radius: 20px;" %>
+    </div>
 </div>
+

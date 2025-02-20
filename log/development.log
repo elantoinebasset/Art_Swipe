@@ -1413,3 +1413,422 @@ Processing by ArtistsController#edit as HTML
 Completed 200 OK in 49ms (Views: 12.9ms | ActiveRecord: 10.9ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/artists" for 127.0.0.1 at 2025-02-20 16:40:34 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (12.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (74.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 209.0ms | GC: 18.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 380.5ms | GC: 104.0ms)
+Completed 200 OK in 556ms (Views: 239.8ms | ActiveRecord: 148.1ms (1 query, 0 cached) | GC: 104.0ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2025-02-20 16:40:38 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 8.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | GC: 4.0ms)
+Completed 200 OK in 101ms (Views: 26.4ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 11.8ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2025-02-20 16:40:47 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArtist Load (9.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 2.4ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 10.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | GC: 0.0ms)
+Completed 200 OK in 71ms (Views: 14.7ms | ActiveRecord: 9.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2025-02-20 16:40:48 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArtist Load (4.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 15.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | GC: 0.0ms)
+Completed 200 OK in 81ms (Views: 24.5ms | ActiveRecord: 4.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2025-02-20 16:40:51 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 33.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.2ms | GC: 0.0ms)
+Completed 200 OK in 125ms (Views: 49.8ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2025-02-20 16:41:27 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArtist Load (12.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.0ms)
+Completed 200 OK in 68ms (Views: 14.4ms | ActiveRecord: 12.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2025-02-20 16:45:26 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (4.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 11.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | GC: 0.0ms)
+Completed 200 OK in 60ms (Views: 19.9ms | ActiveRecord: 4.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2025-02-20 16:45:26 +0100
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArtist Load (9.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='edit',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 170.6ms | GC: 12.4ms)
+  Rendered artists/edit.html.erb within layouts/application (Duration: 184.0ms | GC: 12.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 193.0ms | GC: 12.4ms)
+Completed 200 OK in 253ms (Views: 204.3ms | ActiveRecord: 9.6ms (1 query, 0 cached) | GC: 13.0ms)
+
+
+Started GET "/artists" for 127.0.0.1 at 2025-02-20 16:47:14 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (5.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 30.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 47.8ms | GC: 0.0ms)
+Completed 200 OK in 94ms (Views: 46.1ms | ActiveRecord: 5.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+Started GET "/" for ::1 at 2025-02-20 17:07:47 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (65.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 127.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 476.4ms | GC: 222.0ms)
+Completed 200 OK in 760ms (Views: 375.7ms | ActiveRecord: 113.0ms (1 query, 0 cached) | GC: 222.0ms)
+
+
+Started GET "/assets/application-6e28fa45.css" for ::1 at 2025-02-20 17:07:49 +0100
+Started GET "/assets/application-7ed74485.js" for ::1 at 2025-02-20 17:07:49 +0100
+Started GET "/assets/bootstrap.min-cdc50fbe.js" for ::1 at 2025-02-20 17:07:49 +0100
+Started GET "/assets/popper-2d47ff71.js" for ::1 at 2025-02-20 17:07:49 +0100
+Started GET "/artists/1" for ::1 at 2025-02-20 17:07:55 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArtist Load (7.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 12.2ms | GC: 1.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | GC: 1.3ms)
+Completed 200 OK in 141ms (Views: 21.1ms | ActiveRecord: 7.7ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:08:38 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 5.3ms | GC: 1.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | GC: 1.5ms)
+Completed 200 OK in 36ms (Views: 6.4ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 1.5ms)
+
+
+Started GET "/artists/new" for ::1 at 2025-02-20 17:13:49 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 74.4ms | GC: 32.9ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 76.6ms | GC: 32.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 79.1ms | GC: 32.9ms)
+Completed 200 OK in 112ms (Views: 79.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 32.9ms)
+
+
+Started POST "/artists" for ::1 at 2025-02-20 17:14:04 +0100
+Processing by ArtistsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "artist" => {"picture" => "", "first_name" => "Maxime", "last_name" => "Basset", "date_of_birth(1i)" => "2020", "date_of_birth(2i)" => "6", "date_of_birth(3i)" => "20"}, "commit" => "Create Artist"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN /*action='create',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:27:in 'block in ArtistsController#create'
+  [1m[36mArtist Create (7.5ms)[0m  [1m[32mINSERT INTO "artists" ("picture", "first_name", "last_name", "date_of_birth", "created_at", "updated_at") VALUES ('', 'Maxime', 'Basset', '2020-06-20', '2025-02-20 16:14:04.873705', '2025-02-20 16:14:04.873705') RETURNING "id" /*action='create',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:27:in 'block in ArtistsController#create'
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[35mCOMMIT /*action='create',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:27:in 'block in ArtistsController#create'
+Redirected to http://[::1]:3000/artists/2
+Completed 302 Found in 96ms (ActiveRecord: 35.6ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/artists/2" for ::1 at 2025-02-20 17:14:04 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArtist Load (4.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 18.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | GC: 0.0ms)
+Completed 200 OK in 63ms (Views: 23.5ms | ActiveRecord: 4.1ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:14:08 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 4.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | GC: 0.0ms)
+Completed 200 OK in 32ms (Views: 8.2ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:18:14 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 40.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 44.0ms | GC: 0.0ms)
+Completed 200 OK in 85ms (Views: 25.6ms | ActiveRecord: 23.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/1" for ::1 at 2025-02-20 17:18:16 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArtist Load (7.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | GC: 0.0ms)
+Completed 200 OK in 52ms (Views: 8.2ms | ActiveRecord: 7.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2025-02-20 17:18:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/artists" for ::1 at 2025-02-20 17:19:09 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (3.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 3.1ms | GC: 0.0ms)
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 42.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 47.2ms | GC: 0.0ms)
+Completed 200 OK in 88ms (Views: 28.7ms | ActiveRecord: 21.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/1" for ::1 at 2025-02-20 17:19:12 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArtist Load (12.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 5.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.0ms)
+Completed 200 OK in 68ms (Views: 10.2ms | ActiveRecord: 12.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:20:03 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (3.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 40.9ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 51.2ms | GC: 0.5ms)
+Completed 200 OK in 95ms (Views: 37.5ms | ActiveRecord: 19.3ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/artists/1" for ::1 at 2025-02-20 17:20:05 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArtist Load (13.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 5.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | GC: 0.0ms)
+Completed 200 OK in 68ms (Views: 8.4ms | ActiveRecord: 13.1ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/artists/1" for ::1 at 2025-02-20 17:21:13 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 3.3ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.4ms)
+Completed 200 OK in 51ms (Views: 7.8ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:21:16 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 9.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | GC: 0.0ms)
+Completed 200 OK in 67ms (Views: 28.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:21:18 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 9.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | GC: 0.0ms)
+Completed 200 OK in 43ms (Views: 13.9ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:21:33 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (4.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 40.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 44.4ms | GC: 0.0ms)
+Completed 200 OK in 82ms (Views: 28.9ms | ActiveRecord: 17.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/1" for ::1 at 2025-02-20 17:21:38 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArtist Load (3.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 5.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | GC: 0.0ms)
+Completed 200 OK in 55ms (Views: 15.6ms | ActiveRecord: 3.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/artists/1" for ::1 at 2025-02-20 17:21:40 +0100
+Processing by ArtistsController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "1"}
+  [1m[36mArtist Load (7.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='destroy',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN /*action='destroy',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:52:in 'ArtistsController#destroy'
+  [1m[36mArtist Destroy (11.0ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = 1 /*action='destroy',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:52:in 'ArtistsController#destroy'
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[35mCOMMIT /*action='destroy',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:52:in 'ArtistsController#destroy'
+Redirected to http://[::1]:3000/artists
+Completed 303 See Other in 65ms (ActiveRecord: 29.2ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:21:40 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (3.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/index.html.erb within layouts/application (Duration: 10.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 9.4ms | ActiveRecord: 3.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/2" for ::1 at 2025-02-20 17:21:46 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mArtist Load (8.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 4.7ms | ActiveRecord: 8.3ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started DELETE "/artists/2" for ::1 at 2025-02-20 17:21:47 +0100
+Processing by ArtistsController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "2"}
+  [1m[36mArtist Load (5.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 2 LIMIT 1 /*action='destroy',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mBEGIN /*action='destroy',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:52:in 'ArtistsController#destroy'
+  [1m[36mArtist Destroy (13.1ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = 2 /*action='destroy',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:52:in 'ArtistsController#destroy'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT /*action='destroy',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:52:in 'ArtistsController#destroy'
+Redirected to http://[::1]:3000/artists
+Completed 303 See Other in 75ms (ActiveRecord: 27.1ms (2 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/artists" for ::1 at 2025-02-20 17:21:47 +0100
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/index.html.erb within layouts/application (Duration: 9.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 13.7ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+

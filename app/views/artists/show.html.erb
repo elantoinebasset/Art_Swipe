@@ -5,16 +5,17 @@
 <%= render @artist %>
 
   
+
 <%= link_to "Edit this artist", edit_artist_path(@artist), class:"bouton_edit_art btn btn-outline-success d-grid gap col-7 mx-auto"%>
     <br>
     </div>
 </div> 
 
-<%= link_to "Back to artists", artists_path, class:"bouton_show_art btn btn-outline-info d-grid gap-2 col-3 mx-auto" %>
+<%= link_to "Back to artists", artists_path, class:"bouton_show_artwork btn btn-outline-info d-grid gap-2 col-3 mx-auto" %>
 
 
 
-<%= button_to "Destroy this artist", @artist, method: :delete, class:"bouton_destroy_art btn btn-outline-danger d-grid gap-2 col-3 mx-auto" %>
+<%= button_to "Destroy this artist", @artist, method: :delete, class:"bouton_destroy_artwork btn btn-outline-danger d-grid gap-2 col-3 mx-auto" %>
 
 
 

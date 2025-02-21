@@ -1,11 +1,12 @@
 <% content_for :title, "New artist" %>
 
-<h1>New artist</h1>
+  <div class="container Edit_artist">
+  <h1>New artist</h1>
 
 <%= render "form", artist: @artist %>
 
-<br>
-
+  <br>
+  </div>
 <div>
-  <%= link_to "Back to artist", artists_path, class:"btn btn-outline-info d-grid gap-2 col-6 mx-auto" %>
+  <%= link_to "Back to artist", artists_path, class:"bouton_back_art1 btn btn-outline-info d-grid gap-2 col-6 mx-auto" %>
 </div>

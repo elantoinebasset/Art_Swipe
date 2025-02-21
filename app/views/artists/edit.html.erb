@@ -1,12 +1,13 @@
 <% content_for :title, "Editing artist" %>
+  <div class="container Edit_artist">
 
-<h1>Editing artist</h1>
+  <h1>Editing artist</h1>
 
-<%= render "form", artist: @artist %>
+  <%= render "form", artist: @artist %>
 
-<br>
-
+  <br>
+  </div>
 <div>
-  <%= link_to "Show this artist", @artist, class:"btn btn-outline-info d-grid gap-2 col-3 mx-auto" %> |
-  <%= link_to "Back to artist", artists_path, class:"btn btn-outline-info d-grid gap-2 col-3 mx-auto" %>
+  <%= link_to "Show this artist", @artist, class:"bouton_show_art1 btn btn-outline-info d-grid gap-2 col-3 mx-auto" %> |
+  <%= link_to "Back to artist", artists_path, class:"bouton_back_art2 btn btn-outline-info d-grid gap-2 col-3 mx-auto" %>
 </div>

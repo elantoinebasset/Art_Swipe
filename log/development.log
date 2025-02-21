@@ -5257,3 +5257,323 @@ Processing by ArtistsController#index as HTML
 Completed 200 OK in 48ms (Views: 15.8ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.5ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (18.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-02-21 09:09:59 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20250220101551_create_artists.rb
+
+
+):
+  
+activerecord (8.0.1) lib/active_record/migration.rb:743:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.10) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.10) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.10) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2025-02-21 09:10:03 +0100
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4099196472279122760) /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (16.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ArtSwipe'*/[0m
+Migrating to CreateArtists (20250220101551)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='ArtSwipe'*/[0m
+  [1m[35m (193.2ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "picture" character varying, "first_name" character varying, "last_name" character varying, "date_of_birth" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='ArtSwipe'*/[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK /*application='ArtSwipe'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4099196472279122760) /*application='ArtSwipe'*/[0m
+  
+StandardError (An error has occurred, this and all later migrations canceled:
+
+PG::DuplicateTable: ERREUR:  la relation « artists » existe déjà
+)
+Caused by: ActiveRecord::StatementInvalid (PG::DuplicateTable: ERREUR:  la relation « artists » existe déjà
+)
+Caused by: PG::DuplicateTable (ERREUR:  la relation « artists » existe déjà
+)
+
+Information for: StandardError (An error has occurred, this and all later migrations canceled:
+
+PG::DuplicateTable: ERREUR:  la relation « artists » existe déjà
+):
+  
+
+Information for cause: ActiveRecord::StatementInvalid (PG::DuplicateTable: ERREUR:  la relation « artists » existe déjà
+):
+  
+
+Information for cause: PG::DuplicateTable (ERREUR:  la relation « artists » existe déjà
+):
+  
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/database_statements.rb:160:in 'PG::Connection#exec'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/database_statements.rb:160:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::DatabaseStatements#perform_query'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:556:in 'block (2 levels) in ActiveRecord::ConnectionAdapters::DatabaseStatements#raw_execute'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:1011:in 'block in ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:983:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#with_raw_connection'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:555:in 'block in ActiveRecord::ConnectionAdapters::DatabaseStatements#raw_execute'
+activesupport (8.0.1) lib/active_support/notifications/instrumenter.rb:58:in 'ActiveSupport::Notifications::Instrumenter#instrument'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:1129:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#log'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:554:in 'ActiveRecord::ConnectionAdapters::DatabaseStatements#raw_execute'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:591:in 'ActiveRecord::ConnectionAdapters::DatabaseStatements#internal_execute'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:137:in 'ActiveRecord::ConnectionAdapters::DatabaseStatements#execute'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/query_cache.rb:27:in 'ActiveRecord::ConnectionAdapters::AbstractAdapter#execute'
+activerecord (8.0.1) lib/active_record/connection_adapters/postgresql/database_statements.rb:40:in 'ActiveRecord::ConnectionAdapters::PostgreSQL::DatabaseStatements#execute'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/schema_statements.rb:309:in 'ActiveRecord::ConnectionAdapters::SchemaStatements#create_table'
+activerecord (8.0.1) lib/active_record/migration/default_strategy.rb:10:in 'ActiveRecord::Migration::DefaultStrategy#method_missing'
+activerecord (8.0.1) lib/active_record/migration.rb:1056:in 'block in ActiveRecord::Migration#method_missing'
+activerecord (8.0.1) lib/active_record/migration.rb:1022:in 'block in ActiveRecord::Migration#say_with_time'
+activesupport (8.0.1) lib/active_support/benchmark.rb:17:in 'ActiveSupport::Benchmark.realtime'
+activerecord (8.0.1) lib/active_record/migration.rb:1022:in 'ActiveRecord::Migration#say_with_time'
+activerecord (8.0.1) lib/active_record/migration.rb:1045:in 'ActiveRecord::Migration#method_missing'
+activerecord (8.0.1) lib/active_record/migration.rb:582:in 'ActiveRecord::Migration::Current#create_table'
+db/migrate/20250220101551_create_artists.rb:3:in 'CreateArtists#change'
+activerecord (8.0.1) lib/active_record/migration.rb:991:in 'ActiveRecord::Migration#exec_migration'
+activerecord (8.0.1) lib/active_record/migration.rb:975:in 'block (2 levels) in ActiveRecord::Migration#migrate'
+activesupport (8.0.1) lib/active_support/benchmark.rb:17:in 'ActiveSupport::Benchmark.realtime'
+activerecord (8.0.1) lib/active_record/migration.rb:974:in 'block in ActiveRecord::Migration#migrate'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:412:in 'ActiveRecord::ConnectionAdapters::ConnectionPool#with_connection'
+activerecord (8.0.1) lib/active_record/migration.rb:973:in 'ActiveRecord::Migration#migrate'
+activerecord (8.0.1) lib/active_record/migration.rb:1187:in 'ActiveRecord::MigrationProxy#migrate'
+activerecord (8.0.1) lib/active_record/migration.rb:1535:in 'block in ActiveRecord::Migrator#execute_migration_in_transaction'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/transaction.rb:626:in 'block in ActiveRecord::ConnectionAdapters::TransactionManager#within_new_transaction'
+activesupport (8.0.1) lib/active_support/concurrency/null_lock.rb:9:in 'ActiveSupport::Concurrency::NullLock#synchronize'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/transaction.rb:623:in 'ActiveRecord::ConnectionAdapters::TransactionManager#within_new_transaction'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:367:in 'ActiveRecord::ConnectionAdapters::DatabaseStatements#within_new_transaction'
+activerecord (8.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:359:in 'ActiveRecord::ConnectionAdapters::DatabaseStatements#transaction'
+activerecord (8.0.1) lib/active_record/migration.rb:1586:in 'ActiveRecord::Migrator#ddl_transaction'
+activerecord (8.0.1) lib/active_record/migration.rb:1534:in 'ActiveRecord::Migrator#execute_migration_in_transaction'
+activerecord (8.0.1) lib/active_record/migration.rb:1509:in 'Array#each'
+activerecord (8.0.1) lib/active_record/migration.rb:1509:in 'ActiveRecord::Migrator#migrate_without_lock'
+activerecord (8.0.1) lib/active_record/migration.rb:1454:in 'block in ActiveRecord::Migrator#migrate'
+activerecord (8.0.1) lib/active_record/migration.rb:1606:in 'ActiveRecord::Migrator#with_advisory_lock'
+activerecord (8.0.1) lib/active_record/migration.rb:1454:in 'ActiveRecord::Migrator#migrate'
+activerecord (8.0.1) lib/active_record/migration.rb:1261:in 'ActiveRecord::MigrationContext#up'
+activerecord (8.0.1) lib/active_record/migration.rb:1236:in 'ActiveRecord::MigrationContext#migrate'
+activerecord (8.0.1) lib/active_record/tasks/database_tasks.rb:270:in 'ActiveRecord::Tasks::DatabaseTasks#migrate'
+activerecord (8.0.1) lib/active_record/migration.rb:151:in 'block in <class:PendingMigrationError>'
+activesupport (8.0.1) lib/active_support/actionable_error.rb:30:in 'ActiveSupport::ActionableError.dispatch'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:20:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.10) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.10) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.10) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ArtSwipe'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='ArtSwipe'*/[0m
+  [1m[35m (5214.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "art_swipe_development" /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ArtSwipe'*/[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mSET search_path TO public /*application='ArtSwipe'*/[0m
+  [1m[35m (5124.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "art_swipe_development" /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ArtSwipe'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='ArtSwipe'*/[0m
+  [1m[35m (33.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "art_swipe_development" /*application='ArtSwipe'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='ArtSwipe'*/[0m
+  [1m[35m (69.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "art_swipe_test" /*application='ArtSwipe'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mSET search_path TO public /*application='ArtSwipe'*/[0m
+  [1m[35m (275.5ms)[0m  [1m[35mCREATE DATABASE "art_swipe_development" ENCODING = 'unicode' /*application='ArtSwipe'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='ArtSwipe'*/[0m
+  [1m[35m (89.4ms)[0m  [1m[35mCREATE DATABASE "art_swipe_test" ENCODING = 'unicode' /*application='ArtSwipe'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-02-21 09:13:40 +0100
+  [1m[35m (51.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='ArtSwipe'*/[0m
+  [1m[35m (40.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20250220101551_create_artists.rb
+
+
+):
+  
+activerecord (8.0.1) lib/active_record/migration.rb:743:in 'ActiveRecord::Migration.check_pending_migrations'
+activerecord (8.0.1) lib/active_record/migration.rb:660:in 'block (2 levels) in ActiveRecord::Migration::CheckPending#call'
+activesupport (8.0.1) lib/active_support/file_update_checker.rb:85:in 'ActiveSupport::FileUpdateChecker#execute'
+activerecord (8.0.1) lib/active_record/migration.rb:665:in 'block in ActiveRecord::Migration::CheckPending#call'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in 'Thread::Mutex#synchronize'
+activerecord (8.0.1) lib/active_record/migration.rb:657:in 'ActiveRecord::Migration::CheckPending#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:31:in 'block in ActionDispatch::Callbacks#call'
+activesupport (8.0.1) lib/active_support/callbacks.rb:100:in 'ActiveSupport::Callbacks#run_callbacks'
+actionpack (8.0.1) lib/action_dispatch/middleware/callbacks.rb:30:in 'ActionDispatch::Callbacks#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.0.1) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.0.1) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/remote_ip.rb:96:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.1.10) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.1.10) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.0.1) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/executor.rb:16:in 'ActionDispatch::Executor#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.1.10) lib/rack/sendfile.rb:114:in 'Rack::Sendfile#call'
+actionpack (8.0.1) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.0.1) lib/rails/engine.rb:535:in 'Rails::Engine#call'
+puma (6.6.0) lib/puma/configuration.rb:279:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (6.6.0) lib/puma/request.rb:99:in 'block in Puma::Request#handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in 'Puma::ThreadPool#with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in 'Puma::Request#handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in 'Puma::Server#process_client'
+puma (6.6.0) lib/puma/server.rb:254:in 'block in Puma::Server#run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in 'block in Puma::ThreadPool#spawn_thread'
+Started POST "/rails/actions" for 127.0.0.1 at 2025-02-21 09:13:42 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4099196472279122760) /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (3.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-02-21 08:13:42.794836', '2025-02-21 08:13:42.794839') RETURNING "key" /*application='ArtSwipe'*/[0m
+Migrating to CreateArtists (20250220101551)
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN /*application='ArtSwipe'*/[0m
+  [1m[35m (52.1ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "picture" character varying, "first_name" character varying, "last_name" character varying, "date_of_birth" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250220101551') RETURNING "version" /*application='ArtSwipe'*/[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT /*application='ArtSwipe'*/[0m
+  [1m[35m (9.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4099196472279122760) /*application='ArtSwipe'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-02-21 09:13:43 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (8.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m
+Processing by ArtistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists" /*action='index',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/views/artists/index.html.erb:8
+  Rendered artists/index.html.erb within layouts/application (Duration: 12.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 128.9ms | GC: 32.4ms)
+Completed 200 OK in 204ms (Views: 127.7ms | ActiveRecord: 2.6ms (1 query, 0 cached) | GC: 32.4ms)
+
+
+Started GET "/assets/application-783bb419.css" for 127.0.0.1 at 2025-02-21 09:13:43 +0100
+Started GET "/assets/application-7ed74485.js" for 127.0.0.1 at 2025-02-21 09:13:43 +0100
+Started GET "/assets/turbo.min-fae85750.js" for 127.0.0.1 at 2025-02-21 09:13:43 +0100
+Started GET "/assets/popper-2d47ff71.js" for 127.0.0.1 at 2025-02-21 09:13:44 +0100
+Started GET "/assets/controllers/application-3affb389.js" for 127.0.0.1 at 2025-02-21 09:13:44 +0100
+Started GET "/assets/controllers/hello_controller-708796bd.js" for 127.0.0.1 at 2025-02-21 09:13:44 +0100
+Started GET "/assets/controllers/index-ee64e1f1.js" for 127.0.0.1 at 2025-02-21 09:13:44 +0100
+Started GET "/assets/stimulus.min-4b1e420e.js" for 127.0.0.1 at 2025-02-21 09:13:44 +0100
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for 127.0.0.1 at 2025-02-21 09:13:44 +0100
+Started GET "/assets/bootstrap.min-cdc50fbe.js" for 127.0.0.1 at 2025-02-21 09:13:44 +0100
+Started GET "/artists/new" for 127.0.0.1 at 2025-02-21 09:13:54 +0100
+Processing by ArtistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering artists/new.html.erb within layouts/application
+  Rendered artists/_form.html.erb (Duration: 145.5ms | GC: 0.0ms)
+  Rendered artists/new.html.erb within layouts/application (Duration: 148.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 152.9ms | GC: 0.0ms)
+Completed 200 OK in 211ms (Views: 154.7ms | ActiveRecord: 24.4ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/artists" for 127.0.0.1 at 2025-02-21 09:14:18 +0100
+Processing by ArtistsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "artist" => {"picture" => "", "first_name" => "Leon", "last_name" => "Carter", "date_of_birth(1i)" => "2025", "date_of_birth(2i)" => "2", "date_of_birth(3i)" => "21"}, "commit" => "Create Artist"}
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[35mBEGIN /*action='create',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:27:in 'block in ArtistsController#create'
+  [1m[36mArtist Create (15.7ms)[0m  [1m[32mINSERT INTO "artists" ("picture", "first_name", "last_name", "date_of_birth", "created_at", "updated_at") VALUES ('', 'Leon', 'Carter', '2025-02-21', '2025-02-21 08:14:18.213739', '2025-02-21 08:14:18.213739') RETURNING "id" /*action='create',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:27:in 'block in ArtistsController#create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT /*action='create',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:27:in 'block in ArtistsController#create'
+Redirected to http://127.0.0.1:3000/artists/1
+Completed 302 Found in 71ms (ActiveRecord: 25.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2025-02-21 09:14:18 +0100
+Processing by ArtistsController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mArtist Load (10.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists" WHERE "artists"."id" = 1 LIMIT 1 /*action='show',application='ArtSwipe',controller='artists'*/[0m
+  ↳ app/controllers/artists_controller.rb:63:in 'ArtistsController#set_artist'
+  Rendering layout layouts/application.html.erb
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/_artist.html.erb (Duration: 3.0ms | GC: 0.0ms)
+  Rendered artists/show.html.erb within layouts/application (Duration: 11.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | GC: 0.0ms)
+Completed 200 OK in 117ms (Views: 29.8ms | ActiveRecord: 10.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (9.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ArtSwipe'*/[0m

@@ -7,7 +7,7 @@
     <%= f.input :picture %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
-    <%= f.input :date_of_birth %>
+    <%= f.input :date_of_birth, html5: true %>
     <%= f.association :artworks, include_blank: false %>*
 
     <div class="form-actions">

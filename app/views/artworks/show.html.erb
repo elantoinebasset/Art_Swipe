@@ -1,10 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
+<div class="container-fluid">
+    <div class="container-centrer">
 <%= render @artwork %>
+    </div>
+</div>
 
 <div>
-  <%= link_to "Edit this artwork", edit_artwork_path(@artwork) %> |
-  <%= link_to "Back to artworks", artworks_path %>
-
-  <%= button_to "Destroy this artwork", @artwork, method: :delete %>
+  <%= link_to "Edit this artwork", edit_artwork_path(@artwork), class:"btn btn-outline-success d-grid gap-2 col-3 mx-auto" %> |
+  <%= link_to "Back to artworks", artworks_path , class:"btn btn-outline-info d-grid gap-2 col-3 mx-auto"%>
+  <br>
+  <%= button_to "Destroy this artwork", @artwork, method: :delete , class:"btn btn-outline-danger d-grid gap-2 col-3 mx-auto"%>
 </div>

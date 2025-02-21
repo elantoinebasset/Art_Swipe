@@ -2,10 +2,19 @@
 
 <% content_for :title, "Artists" %>
 
-<div class="container titre_Page_Artwork" >
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><%= link_to "Home", root_path %></li>
+    <li class="breadcrumb-item active" aria-current="page">Our Artists</li>
+  </ol>
+</nav>
+
+<div class="container titre_Page_Artist" >
 <h1>Our Artists</h1>
-</div
->
+
+</div>
+
+
 <div id="artists">
   <% @artists.each do |artist| %>
     <%= render artist %>

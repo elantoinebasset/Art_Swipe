@@ -3,18 +3,32 @@
 <% content_for :title, "Artworks" %>
 
 <h1 class="title-page-artwork"><u>ARTWORKS</u></h1>
+<br>
 
-<div id="artworks">
-  <% @artworks.each do |artwork| %>
-    <%= render artwork %>
-    <p>
-      <%= link_to "Show this artwork", artwork, class:"btn btn-outline-info d-grid gap-2 col-6 mx-auto" %>
-    </p>
-    <br>
-    <hr style="border: 3px solid black;">
-    <br>
-  <% end %>
+<div class="container-centrer-artwork-list">
+  <div id="artworks">
+    <% @artworks.each do |artwork| %>
+      <div class="artwork-item">
+        <%= render artwork %>
+
+        <p>
+          <br>
+          <%= link_to "Show this artwork", artwork, class:"btn btn-outline-info d-grid gap-2 col-5 mx-auto" %>
+        </p>
+        <br>
+
+        <div class="d-flex justify-content-center">
+          <hr style="border: 4px solid black; width: 60%;">
+        </div>
+        <br>
+      </div>
+    <% end %>
+  </div>
 </div>
 
-
+<br>
+<br>
 <%= link_to "New artwork", new_artwork_path, class: "btn btn-outline-info d-grid gap-2 col-6 mx-auto" %>
+<br>
+<br>
+

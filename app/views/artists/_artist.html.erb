@@ -31,6 +31,14 @@
     
         <%= artist.date_of_birth %>
         </div>
+
+
+        <div class="artist-centre">
+        <h4> <strong>artworks:</strong> </h4>
+    
+        <%= artist.artworks.map(&:title).join(", ") %>
+
+        </div>
       </div>
 
     </div>

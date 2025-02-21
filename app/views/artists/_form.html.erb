@@ -2,15 +2,17 @@
 <%= simple_form_for(@artist) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
+<div class="container">
+  <div class="test form-inputs">
     <%= f.input :picture %>
     <%= f.input :first_name %>
     <%= f.input :last_name %>
     <%= f.input :date_of_birth %>
-  </div>
+  
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+    <div class="form-actions">
+    <%= f.button :submit, class:"bouton_edit_art btn btn-outline-success d-grid gap-2 col-3 mx-auto"%>
+    </div>
   </div>
+</div>
 <% end %>

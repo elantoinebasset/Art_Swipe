@@ -2,15 +2,17 @@
 
 <% content_for :title, "Artists" %>
 
+<div class="container Titre_Page_Art" >
 <h1>Artists</h1>
-
+</div
+>
 <div id="artists">
   <% @artists.each do |artist| %>
     <%= render artist %>
     <p>
-      <%= link_to "Show this artist", artist, class:"btn btn-outline-info d-grid gap-2 col-6 mx-auto"%>
+      <%= link_to "Show this artist", artist, class:" bouton_show btn btn-outline-info d-grid gap-2 col-3 mx-auto"%>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New artist", new_artist_path, class:"btn btn-outline-success d-grid gap-2 col-6 mx-auto"%>
+<%= link_to "New artist", new_artist_path, class:"bouton_new btn btn-outline-success d-grid gap-2 col-2 mx-auto"%>

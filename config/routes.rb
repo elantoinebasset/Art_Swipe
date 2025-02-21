@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "pages#main"
   resources :artworks
   resources :artists
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -12,5 +13,4 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-  root 'artists#index'
 end

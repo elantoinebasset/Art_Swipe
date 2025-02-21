@@ -11,7 +11,7 @@
     <br>
     <%= f.association :artist, collection: Artist.all, label_method: :first_name %>
     <br>
-    <%= f.input :creation_date %>
+    <%= f.input :creation_date, html5: true%>
     <br>
     <%= f.input :history %>
   </div>

@@ -236,7 +236,14 @@ margin-top: 10px;
   justify-content: center;
   align-items: center;
   text-align: center;
+  letter-spacing: 2px;
+  color: #333;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+  width: fit-content;
+  margin: auto;
 }
+
 
 .container-centrer-edit-artwork {
   display: flex;
@@ -279,5 +286,13 @@ margin-top: 10px;
   margin: 0 auto;
   padding: 20px;
 }
+
+.text-style-artwork {
+  color: #2b2b2b;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
 
 

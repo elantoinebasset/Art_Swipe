@@ -12,7 +12,7 @@
       <div class="artwork-info">
         <div class="artwork-info-column">
           <div class="artwork-centre">
-            <h4><strong>Artist:</strong></h4> 
+            <h4><strong class="text-style-artwork"><u>Artist:</u></strong></h4> 
             <a href="<%= artist_path(artwork.artist) %>">
               <h5><%= artwork.artist.first_name %> <%= artwork.artist.last_name %></h5>
               </a>
@@ -20,11 +20,11 @@
 
 
           <div class="artwork-centre">
-            <h4><strong>Creation Date:</strong></h4> <h5><%= artwork.creation_date %></h5>
+            <h4><strong class="text-style-artwork"><u>Creation Date:</u></strong></h4> <h5><%= artwork.creation_date %></h5>
           </div>
 
           <div class="artwork-history">
-            <h4><strong>History:</strong><h4> <h6><%= artwork.history %><h6>
+            <h4><strong class="text-style-artwork"><u>History:</u></strong><h4> <h5><i><%= artwork.history %></i><h5>
           </div>
         </div>
       </div>

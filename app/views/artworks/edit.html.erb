@@ -1,19 +1,28 @@
+<div class="background-artwork">
 <% content_for :title, "Editing artwork" %>
 
-<h1 class="title-page-artwork"><u>EDITING ARTWORK</u></h1>
 <br>
 
 <div class="edit-container-fluid-artwork">
   <div class="container-centrer-edit-artwork">
+    <h1 class="title-page-artwork"><u>EDITING ARTWORK</u></h1>
+    <br>
+    <br>
+
+
 <%= render "form", artwork: @artwork%>
 
 <br>
-</div>
-</div>
-
 <br>
 <div class="edit-buttons">
-  <%= link_to "Show this artwork", @artwork, class:"btn btn-outline-info d-grid gap-2 col-3 mx-auto"%> |
-  <%= link_to "Back to artworks", artworks_path, class:"btn btn-outline-danger d-grid gap-2 col-3 mx-auto" %>
+  <hr>
+<%= link_to "Show this artwork", @artwork, class:"btn btn-outline-info d-grid gap-2 col-12 mx-auto width-80" %> |
+<%= link_to "Back to artworks", artworks_path, class:"btn btn-outline-danger d-grid gap-2 col-12 mx-auto" %>
+</div>
 </div>
 <br>
+<br>
+</div>
+<br>
+<br>
+

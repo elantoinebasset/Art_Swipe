@@ -1,17 +1,18 @@
+<div class="background-artwork">
 <% content_for :title, "New artwork" %>
 
-<h1 class="title-page-artwork"><u>NEW ARTWORK</u></h1>
 <br>
-
 <div class="edit-container-fluid-artwork">
   <div class="container-centrer-create-artwork">
+    <h1 class="title-page-artwork"><u>NEW ARTWORK</u></h1>
 <%= render "form", artwork: @artwork %>
 
-</div>
-</div>
 <br>
-
+<hr>
 <div>
-  <%= link_to "Back to artworks", artworks_path, class: "btn btn-outline-info d-grid gap-2 col-6 mx-auto" %>
+  <%= link_to "Back to artworks", artworks_path, class: "btn btn-outline-info d-grid gap-2 col-12 mx-auto" %>
+</div>
+</div>
 </div>
 <br>
+</div>

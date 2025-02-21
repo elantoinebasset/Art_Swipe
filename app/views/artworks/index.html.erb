@@ -2,7 +2,7 @@
 
 <% content_for :title, "Artworks" %>
 
-<h1>Artworks</h1>
+<h1 class="title-page-article"><u>ARTWORKS</u></h1>
 
 <div id="artworks">
   <% @artworks.each do |artwork| %>
@@ -10,7 +10,11 @@
     <p>
       <%= link_to "Show this artwork", artwork, class:"btn btn-outline-info d-grid gap-2 col-6 mx-auto" %>
     </p>
+    <br>
+    <hr style="border: 3px solid black;">
+    <br>
   <% end %>
 </div>
+
 
 <%= link_to "New artwork", new_artwork_path, class: "btn btn-outline-info d-grid gap-2 col-6 mx-auto" %>

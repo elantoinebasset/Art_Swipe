@@ -1,19 +1,9 @@
-
-<div class="container-fluid-artwork">
+<div class="container-fluid">
   <div id="<%= dom_id artwork %>" class="artwork-container">
     <div class="artwork-title">
       <h2><strong><%= artwork.title %></strong></h2>
     </div>
     <br>
-
-
-  
-  <div class="container-fluid">
-    <div id="<%= dom_id artwork %>" class="artwork-container">
-      <div class="artwork-title">
-        <h2><strong><%= artwork.title %></strong></h2>
-      </div>
-      <br>
 
       <div class="artwork-photo">    
         <%= image_tag artwork.image if artwork.image.present? %>

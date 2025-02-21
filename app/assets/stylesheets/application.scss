@@ -1,5 +1,6 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+
 .artist-container {
     display: flex;
     flex-direction: column; 
@@ -31,6 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
   }
 
   .container-centrer {
@@ -44,3 +46,35 @@
     border-radius: 10px; 
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   }
+
+  .Titre_Page_Art {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    text-align: center; 
+    background-color: #f7f7f7;
+    border-radius: 10px; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bouton_show {
+  margin-top: 10px;
+}
+
+.bouton_new {
+  margin-bottom: 10px;
+}
+
+.bouton_edit_art {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.bouton_show_art {
+  margin-bottom: 10px;
+}
+
+.bouton_destroy_art {
+  margin-bottom: 10px;
+}

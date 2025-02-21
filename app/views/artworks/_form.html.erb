@@ -3,15 +3,21 @@
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs">
+  <div class="form-inputs col-12 padding-right-20 padding-left-20">
     <%= f.input :title %>
+    <br>
     <%= f.input :image %>
+    <br>
     <%= f.association :artist %>
+    <br>
     <%= f.input :creation_date %>
+    <br>
     <%= f.input :history %>
   </div>
 
+<br>
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class:"btn btn-outline-success d-grid gap-2 mx-auto"%>
   </div>
+  <br>
 <% end %>

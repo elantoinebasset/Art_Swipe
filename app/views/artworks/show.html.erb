@@ -7,8 +7,10 @@
 </div>
 
 <div>
+  <br>
   <%= link_to "Edit this artwork", edit_artwork_path(@artwork), class:"btn btn-outline-success d-grid gap-2 col-3 mx-auto" %> |
   <%= link_to "Back to artworks", artworks_path , class:"btn btn-outline-info d-grid gap-2 col-3 mx-auto"%>
   <br>
   <%= button_to "Destroy this artwork", @artwork, method: :delete , class:"btn btn-outline-danger d-grid gap-2 col-3 mx-auto"%>
+  <br>
 </div>

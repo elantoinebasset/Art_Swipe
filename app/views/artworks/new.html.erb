@@ -1,11 +1,17 @@
 <% content_for :title, "New artwork" %>
 
-<h1>New artwork</h1>
+<h1 class="title-page"><u>NEW ARTWORK</u></h1>
+<br>
 
+<div class="edit-container-fluid">
+  <div class="container-centrer-create">
 <%= render "form", artwork: @artwork %>
 
+</div>
+</div>
 <br>
 
 <div>
   <%= link_to "Back to artworks", artworks_path, class: "btn btn-outline-info d-grid gap-2 col-6 mx-auto" %>
 </div>
+<br>

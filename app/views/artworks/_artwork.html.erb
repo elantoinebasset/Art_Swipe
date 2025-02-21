@@ -1,29 +1,31 @@
-<div class="container-fluid">
-  <div id="<%= dom_id artwork %>" class="artwork-container">
-    <div class="artwork-title">
-      <h2><strong><%= artwork.title %></strong></h2>
-    </div>
-    <br>
 
-    <div class="artwork-photo">    
-      <%= image_tag artwork.image if artwork.image.present? %>
-    </div>
+  
+  <div class="container-fluid">
+    <div id="<%= dom_id artwork %>" class="artwork-container">
+      <div class="artwork-title">
+        <h2><strong><%= artwork.title %></strong></h2>
+      </div>
+      <br>
 
-    <div class="artwork-info">
-      <div class="artwork-info-column">
-        <div class="artwork-centre">
-          <h4><strong>Artist:</strong></h4> <h5><%= artwork.artist_id %></h5>
-        </div>
+      <div class="artwork-photo">    
+        <%= image_tag artwork.image if artwork.image.present? %>
+      </div>
 
-        <div class="artwork-centre">
-          <h4><strong>Creation Date:</strong></h4> <h5><%= artwork.creation_date %></h5>
-        </div>
+      <div class="artwork-info">
+        <div class="artwork-info-column">
+          <div class="artwork-centre">
+            <h4><strong>Artist:</strong></h4> <h5><%= artwork.artist_id %></h5>
+          </div>
 
-        <div class="artwork-history">
-          <h4><strong>History:</strong><h4> <h6><%= artwork.history %><h6>
+          <div class="artwork-centre">
+            <h4><strong>Creation Date:</strong></h4> <h5><%= artwork.creation_date %></h5>
+          </div>
+
+          <div class="artwork-history">
+            <h4><strong>History:</strong><h4> <h6><%= artwork.history %><h6>
+          </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
-</div>
